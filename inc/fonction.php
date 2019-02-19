@@ -67,7 +67,7 @@ function isLogged() {
 
 function isAdmin() {
   if (isLogged()) {
-    if ($_SESSION['user']['roles'] == 'admin') {
+    if ($_SESSION['user']['roles'] == 'SuperUser') {
       return true;
     }
   }
