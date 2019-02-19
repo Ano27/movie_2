@@ -1,13 +1,13 @@
 <?php
-include('../inc/fonctions.php');
+include('../inc/fonction.php');
 // --------------------------------------------------------------------------------
 //PDO => connexion base de donne
 include('../inc/pdo.php');
 //---------------------------------------------------------------------------------
 //traitement php
- include('inc/header_backup.php'); ?>
+ include('inc/header.php'); ?>
 
 
 <?php
 // --------------------------------------------------------------------------------
-  include('inc/footer_backup.php');
+  include('inc/footer.php');

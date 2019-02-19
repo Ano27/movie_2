@@ -29,16 +29,11 @@
                 </li>
               <?php } else { ?>
                 <li class="nav-item">
-                  <a class="blanc" href="deconnexion.php">• Déconnexion</a>
+                  <a class="blanc" href="../index.php">• Retour sur front</a>
                 </li>
                 <li class="nav-item">
                   <a class="blanc" href="profil.php">• Profil</a>
                 </li>
-                <?php if (isAdmin()) { ?>
-                  <li class="nav-item">
-                    <a class=" blanc" href="admin/index.php">• Go au Back</a>
-                  </li>
-                <?php } ?>
                 <li class="nav-item">
                   <?php echo 'Bonjour'.' '. $_SESSION['user']['pseudo']; ?>
                 </li>
@@ -46,7 +41,7 @@
 
             </li>
           </ul>
-          <form action="search.php" method="get" class="form-inline my-2 my-lg-0">
+          <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
           </form>
