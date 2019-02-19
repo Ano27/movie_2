@@ -11,5 +11,6 @@ include('inc/pdo.php');
 <h1>Salut</h1>
 <h2>ca va</h2>
 <h3>c'est bon on maitrise le push pull </h3>
+<a href="login.php">Login</a>
 // --------------------------------------------------------------------------------
 <?php include('inc/footer.php');
