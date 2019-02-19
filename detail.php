@@ -1,5 +1,6 @@
 <?php
 include('inc/pdo.php');
+<<<<<<< HEAD
 include('inc/fonction.php');
 // title year directors rating
 
@@ -36,5 +37,20 @@ include('inc/header.php'); ?>
 
 </div>
 
+=======
+include('inc/request.php');
+require('inc/fonction.php');
+?>
+
+<?php
+$id = $_GET['slug'];
+?>
+
+<?php include('inc/header.php');?>
+
+<?php
+
+?>
+>>>>>>> 33123990ecd0aeab6759f1ea5a046f60d49c7d13
 
 <?php include('inc/footer.php');
