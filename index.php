@@ -24,8 +24,9 @@ $movies = $query->fetchAll();
   include('inc/header.php');?>
 
   <?php foreach ($movies as $movie): ?>
-      <h2><?= $movie['title']; ?></h2>
-      <?php affiche($movie)?>
+      <div class="affichefilm"><h2 id="titrefilm"><?= $movie['title']; ?></h2>
+      <?php affiche($movie)?></div>
   <?php endforeach; ?>
+  <a id="plusdefilm" href="index.php">« + de films ! »</a>
 
 <?php include('inc/footer.php');
