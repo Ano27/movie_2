@@ -15,7 +15,7 @@ require('inc/fonction.php');
     <?php affiche($movie)?></div> -->
 
       <?php echo '<li class="affichefilm">'.'<a id="titrefilm" href="detail.php?id='.$movie['id'].'" >' .$movie['title'] . '</a></li>';?>
-      <?php  affiche($movie)?>
+      <?php echo  affiche($movie)?>
 
   <?php endforeach; ?>
   <a id="plusdefilm" href="index.php">« + de films ! »</a>
