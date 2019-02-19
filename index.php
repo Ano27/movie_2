@@ -24,7 +24,7 @@ $movies = $query->fetchAll();
   include('inc/header.php');?>
 
   <?php foreach ($movies as $movie): ?>
-      <h2><?= $movie['title']; ?></h2>
+      <?php echo '<li>'.'<a href="detail.php?id='.$movie['id'].'" >' .$movie['title'] . '</a></li>';?>
       <?php affiche($movie)?>
   <?php endforeach; ?>
 
