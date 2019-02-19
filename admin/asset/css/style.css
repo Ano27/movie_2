@@ -13,9 +13,12 @@ body {
 /* NAV */
 
 #nav{
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4c4c4c+0,595959+12,666666+25,474747+39,2c2c2c+50,000000+51,111111+60,2b2b2b+76,1c1c1c+91,131313+100;Black+Gloss+%231 */
-background-color: red;
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b4e391+0,61c419+50,b4e391+100;Green+3D */
+background: rgb(180,227,145); /* Old browsers */
+background: -moz-linear-gradient(-45deg, rgba(180,227,145,1) 0%, rgba(97,196,25,1) 50%, rgba(180,227,145,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, rgba(180,227,145,1) 0%,rgba(97,196,25,1) 50%,rgba(180,227,145,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, rgba(180,227,145,1) 0%,rgba(97,196,25,1) 50%,rgba(180,227,145,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4e391', endColorstr='#b4e391',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 margin-bottom: 50px;
 }
 
@@ -33,12 +36,7 @@ margin-bottom: 50px;
 
 #titrelogo {
   font-size: 3em;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6db3f2+30,54a3ee+45,3690f0+52,1e69de+76 */
-color: rgb(109,179,242); /* Old browsers */
-color: -moz-linear-gradient(-45deg, rgba(109,179,242,1) 30%, rgba(84,163,238,1) 45%, rgba(54,144,240,1) 52%, rgba(30,105,222,1) 76%); /* FF3.6-15 */
-color: -webkit-linear-gradient(-45deg, rgba(109,179,242,1) 30%,rgba(84,163,238,1) 45%,rgba(54,144,240,1) 52%,rgba(30,105,222,1) 76%); /* Chrome10-25,Safari5.1-6 */
-color: linear-gradient(135deg, rgba(109,179,242,1) 30%,rgba(84,163,238,1) 45%,rgba(54,144,240,1) 52%,rgba(30,105,222,1) 76%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', endColorstr='#1e69de',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  color: green;
 }
 
 /* PARTIE FORMULAIRE */
