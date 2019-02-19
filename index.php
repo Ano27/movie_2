@@ -18,7 +18,6 @@ $movies = $query->fetchAll();
     <div class="affichefilm"><h2><?php echo $movie['title']; ?></h2>
     <h2 id="titrefilm"><a href="detail.php?id=<?php echo $movie['id']; ?>"></h2>
     <?php affiche($movie)?></div>
-<h1>pour paul</h1>
   <?php endforeach; ?>
   <a id="plusdefilm" href="index.php">« + de films ! »</a>
 
