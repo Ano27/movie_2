@@ -116,16 +116,16 @@ include('inc/header.php'); ?>
     <div class="form-group">
     <label id="label" for="pseudo">• Pseudo *</label>
     <input class="form-control" type="text" name="pseudo" value="<?php if(!empty($_POST['pseudo'])) { echo $_POST['pseudo']; } ?>" placeholder="Ex: Bob">
-    <span class="error"><?php if(!empty($error['pseudo'])) { echo $error['pseudo']; } ?></span>
+    <span class="error" style="color:red"><?php if(!empty($error['pseudo'])) { echo $error['pseudo']; } ?></span>
     </div>
 
     <label id="label" for="email">• Email *</label>
     <input class="form-control" type="text" name="email" value="<?php if(!empty($_POST['email'])) { echo $_POST['email']; } ?>" placeholder="Ex: bob@gmail.com">
-    <span class="error"><?php if(!empty($error['email'])) { echo $error['email']; } ?></span>
+    <span class="error" style="color:red"><?php if(!empty($error['email'])) { echo $error['email']; } ?></span><br>
 
     <label id="label" for="password">• Mot de passe *</label>
     <input class="form-control" type="password" name="password" value="" placeholder="Le mot de passe">
-    <span class="error"><?php if(!empty($error['password'])) { echo $error['password']; } ?></span>
+    <span class="error" style="color:red"><?php if(!empty($error['password'])) { echo $error['password']; } ?></span><br>
 
     <label id="label" for="password2">• Verifier votre mot de passe *</label>
     <input class="form-control" type="password" name="password2" value="" placeholder="Retappe le mot de passe">
