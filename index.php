@@ -14,14 +14,11 @@ $movies = $query->fetchAll();
   include('inc/header.php');?>
 
   <?php foreach ($movies as $movie): ?>
-<<<<<<< HEAD
-    <h2><?php echo $movie['title']; ?></h2>
-    <h2><a href="detail.php?id=<?php echo $movie['id']; ?>"></h2>
-    <?php affiche($movie)?>
-=======
-      <div class="affichefilm"><h2 id="titrefilm"><?= $movie['title']; ?></h2>
-      <?php affiche($movie)?></div>
->>>>>>> 33123990ecd0aeab6759f1ea5a046f60d49c7d13
+
+    <div class="affichefilm"><h2><?php echo $movie['title']; ?></h2>
+    <h2 id="titrefilm"><a href="detail.php?id=<?php echo $movie['id']; ?>"></h2>
+    <?php affiche($movie)?></div>
+
   <?php endforeach; ?>
   <a id="plusdefilm" href="index.php">« + de films ! »</a>
 
