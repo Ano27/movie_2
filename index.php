@@ -1,4 +1,5 @@
 <?php
+
 include('inc/pdo.php');
 include('inc/request.php');
 require('inc/fonction.php');
@@ -31,4 +32,6 @@ require('inc/fonction.php');
   <a href="admin/index.php">Go au Back</a>
 <?php } ?>
 // --------------------------------------------------------------------------------
+
+
 <?php include('inc/footer.php');
