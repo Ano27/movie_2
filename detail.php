@@ -3,7 +3,6 @@ include('inc/pdo.php');
 
 include('inc/fonction.php');
 // title year directors rating
-
 if(!empty($_GET['id']) && is_numeric($_GET['id'])) {
   $id = $_GET['id'];
   $sql = "SELECT * FROM movies_full
@@ -17,7 +16,6 @@ if(!empty($_GET['id']) && is_numeric($_GET['id'])) {
       $film = $movies;
     }
   if (!empty($film)) {
-
   } else {
     die('404');
   }
@@ -32,9 +30,6 @@ include('inc/header.php'); ?>
   <h3>Réalisateur : <?php echo $film['directors'] ?></h3>
   <h3>Note : <?php echo $film['rating'] ?></h3>
   <a href="index.php">Home</a>
-
-
-
 </div>
 
 <?php include('inc/footer.php');
