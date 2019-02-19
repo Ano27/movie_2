@@ -7,10 +7,29 @@ function countFilms(){
 	$totalFilms = $query->fetchColumn();
 	return $totalFilms;
 }
-
-function searchArticles($search){
+function getArticleById($id) {
   global $pdo;
-  $sql = "SELECT * FROM movies_full WHERE title, cast, directors LIKE :search Otitle AND cast AND directors LIKE :search";
+    $sql = "SELECT * FROM articles WHERE id = :id";
+    $query = $pdo->prepare($sql);
+  $query->bindValue(':id',$id,PDO::PARAM_INT);
+    $query->execute();
+    $data = $query->fetch();
+    return $data;
+}
+function getdscrition() {
+	global $pdo;
+	$sql = "SELECT * FROM movies_full
+	        ORDER BY RAND()
+	        LIMIT 6";
+	$query = $pdo->prepare($sql);
+	$query->execute();
+	$movies = $query->fetchAll();
+	  return $movies;
+}
+
+function searchMovies($search){
+  global $pdo;
+  $sql = "SELECT * FROM movies_full WHERE title LIKE :search OR cast LIKE :search OR directors LIKE :search";
   $stmt = $pdo->prepare($sql);
   $stmt->bindValue(':search','%'.$search.'%', PDO::PARAM_STR);
   $stmt->execute();
