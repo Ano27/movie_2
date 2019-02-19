@@ -47,7 +47,7 @@ include_once('inc/header.php');
 <form id="formulaire" class="" method="post">
   <div class="form-group">
     <label id="label" for="login">• Pseudo / Email *</label>
-    <span class="error"><?php if(!empty($error['login'])) { echo $error['login']; } ?></span>
+    <span class="error" style="color:red"><?php if(!empty($error['login'])) { echo $error['login']; } ?></span>
     <input class="form-control" type="text" name="login" value="" placeholder="Votre pseudo ou email ici...">
   </div>
   <div class="form-group">
