@@ -16,3 +16,13 @@ function searchArticles($search){
   $stmt->execute();
   return $stmt->fetchAll();
 }
+function getdscrition() {
+	global $pdo;
+	$sql = "SELECT * FROM movies_full
+	        ORDER BY RAND()
+	        LIMIT 6";
+	$query = $pdo->prepare($sql);
+	$query->execute();
+	$movies = $query->fetchAll();
+	  return $movies;
+}
