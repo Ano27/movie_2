@@ -12,10 +12,6 @@ $sql = "SELECT * FROM movies_full
 $query = $pdo->prepare($sql);
 $query->execute();
 $arts = $query->fetch();
-
-print_r($arts);
-debug($arts);
-
 //---------------------------------------------------------------------------------
 //traitement php
 //---------------------------------------------------------------------------------
