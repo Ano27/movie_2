@@ -44,18 +44,19 @@ if (!empty($_POST['submitted'])) {
 
 include_once('inc/header.php');
 ?>
-<form class="" method="post">
-
-  <label for="login">Pseudo / Email</label>
-  <span class="error"><?php if(!empty($error['login'])) { echo $error['login']; } ?></span>
-  <input type="text" name="login" value="">
-  <br>
-  <label for="password">Mot de passe</label>
-  <input type="password" name="password" value="">
-  <input class="" type="submit" name="submitted" value="Connexion">
-
+<form id="formulaire" class="" method="post">
+  <div class="form-group">
+    <label id="label" for="login">• Pseudo / Email *</label>
+    <span class="error"><?php if(!empty($error['login'])) { echo $error['login']; } ?></span>
+    <input class="form-control" type="text" name="login" value="" placeholder="Votre pseudo ou email ici...">
+  </div>
+  <div class="form-group">
+    <label id="label" for="password">• Mot de passe *</label>
+    <input class="form-control" type="password" name="password" value="" placeholder="Le mot de passe">
+  </div>
+  <a id="motdepasseoublier" href="forgetpassword.php">Mot de passe oublié</a> <br>
+  <input id="boutoninscription" class="btn btn-primary" type="submit" name="submitted" value="Connexion">
 </form>
 
-<a href="forgetpassword.php">Mot de passe oublié</a>
 
 <?php include_once('inc/footer.php');

@@ -1,4 +1,9 @@
 @import "reset.css";
+
+body {
+  background-color: #262626;
+}
+
 .wrap{
   width: 100%;
   max-width: 900px;
@@ -8,11 +13,35 @@
   text-align: center;
 }
 
-h1{
-  font-size: 5em;
-  text-align: center;
-  color: #fff;
+#titrelogo {
+  font-size: 3em;
+}
+
+#formulaire {
   background-color: #262626;
-  height: 200px;
-  padding-top: 50px;
+  margin-top: 50px;
+}
+
+#label {
+  color: #fff;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+#label:hover {
+  color: lightblue;
+}
+
+#boutoninscription {
+  margin-top: 20px;
+}
+
+#motdepasseoublier {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.3em;
+}
+
+#motdepasseoublier:hover {
+  color: lightblue;
 }

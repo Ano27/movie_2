@@ -112,23 +112,25 @@ if ( !empty($_POST['submitidee']) )
 include('inc/header.php'); ?>
 
 
-<form class="" action="" method="post">
-    <label for="pseudo">Ecrivez votre pseudo</label><br>
-    <input type="text" name="pseudo" value="<?php if(!empty($_POST['pseudo'])) { echo $_POST['pseudo']; } ?>"><br>
+<form id="formulaire" class="" action="" method="post">
+    <div class="form-group">
+    <label id="label" for="pseudo">• Pseudo *</label>
+    <input class="form-control" type="text" name="pseudo" value="<?php if(!empty($_POST['pseudo'])) { echo $_POST['pseudo']; } ?>" placeholder="Ex: Bob">
     <span class="error"><?php if(!empty($error['pseudo'])) { echo $error['pseudo']; } ?></span>
+    </div>
 
-    <label for="email">Entrer un email</label><br>
-    <input type="text" name="email" value="<?php if(!empty($_POST['email'])) { echo $_POST['email']; } ?>"><br>
+    <label id="label" for="email">• Email *</label>
+    <input class="form-control" type="text" name="email" value="<?php if(!empty($_POST['email'])) { echo $_POST['email']; } ?>" placeholder="Ex: bob@gmail.com">
     <span class="error"><?php if(!empty($error['email'])) { echo $error['email']; } ?></span>
 
-    <label for="password">Entrer un MDP</label><br>
-    <input type="password" name="password" value=""><br>
+    <label id="label" for="password">• Mot de passe *</label>
+    <input class="form-control" type="password" name="password" value="" placeholder="Le mot de passe">
     <span class="error"><?php if(!empty($error['password'])) { echo $error['password']; } ?></span>
 
-    <label for="confipword">Verifier votre mot de passe</label><br>
-    <input type="password" name="password2" value=""><br>
+    <label id="label" for="password2">• Verifier votre mot de passe *</label>
+    <input class="form-control" type="password" name="password2" value="" placeholder="Retappe le mot de passe">
 
-    <input type="submit" name="submitidee" value="cliquer pour sousmettre">
+    <input id="boutoninscription" class="btn btn-primary" type="submit" name="submitidee" value="S'inscrire">
 
 
 
