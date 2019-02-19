@@ -1,6 +1,5 @@
 <?php
 include('inc/pdo.php');
-
 include('inc/fonction.php');
 // title year directors rating
 if(!empty($_GET['id']) && is_numeric($_GET['id'])) {
@@ -31,5 +30,4 @@ include('inc/header.php'); ?>
   <h3>Note : <?php echo $film['rating'] ?></h3>
   <a href="index.php">Home</a>
 </div>
-
 <?php include('inc/footer.php');
