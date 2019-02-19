@@ -1,22 +1,12 @@
 <?php
-include('inc/fonction.php');
+include('inc/pdo.php');
+include('inc/request.php');
+require('inc/fonction.php');
 // --------------------------------------------------------------------------------
 //PDO => connexion base de donne
-include('inc/pdo.php');
-
-if (!empty($_GET['page'])){
-    $page = $_GET['page'];
-    $offset = $page * $num - $num;
-}
 
 
-$sql = "SELECT * FROM articles
-            ORDER BY created_at DESC
-            LIMIT $offset,$num";
 
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute();
-    $arts = $stmt->fetchAll();
 
 //---------------------------------------------------------------------------------
 //traitement php
@@ -26,10 +16,19 @@ $sql = "SELECT * FROM articles
 <h1>Salut</h1>
 <h2>ca va</h2>
 <h3>c'est bon on maitrise le push pull </h3>
-
-<a href="login.php">Login</a>
-
-<a href="register.php"> cree Compte</a>
-
+<?php if (!isLogged()) { ?>
+  <a href="register.php">Compte</a>
+  <br>
+  <a href="login.php">Login</a>
+<?php } else { ?>
+  <a href="deconnexion.php">Deconnexion</a>
+  <br>
+  <a href="profil.php">Profil</a>
+  <br>
+  <?php echo 'Bonjour'.' '. $_SESSION['user']['pseudo']; ?>
+<?php } ?>
+<?php if (isAdmin()) { ?>
+  <a href="admin/index.php">Go au Back</a>
+<?php } ?>
 // --------------------------------------------------------------------------------
 <?php include('inc/footer.php');
