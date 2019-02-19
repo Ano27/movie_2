@@ -34,15 +34,16 @@
                 <li class="nav-item">
                   <a class="blanc" href="profil.php">• Profil</a>
                 </li>
+                <?php if (isAdmin()) { ?>
+                  <li class="nav-item">
+                    <a class=" blanc" href="admin/index.php">• Go au Back</a>
+                  </li>
+                <?php } ?>
                 <li class="nav-item">
                   <?php echo 'Bonjour'.' '. $_SESSION['user']['pseudo']; ?>
                 </li>
               <?php } ?>
-              <?php if (isAdmin()) { ?>
-                <li class="nav-item">
-                  <a class=" blanc" href="admin/index.php">• Go au Back</a>
-                </li>
-              <?php } ?>
+
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
