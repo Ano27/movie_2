@@ -18,14 +18,28 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
-            </li>
             <li class="nav-item">
-              <a class="nav-link" href="login.php">• S'identifier</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="register.php">• Créer un compte</a>
+              <?php if (!isLogged()) { ?>
+                <li class="nav-item">
+                  <a class="nav-link" href="login.php">• S'identifier</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="register.php">• Créer un compte</a>
+                </li>
+              <?php } else { ?>
+                <li class="nav-item">
+                  <a class="nav-link" href="deconnexion.php">• Déconnexion</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="profil.php">• Profil</a>
+                </li>
+                <?php echo 'Bonjour'.' '. $_SESSION['user']['pseudo']; ?>
+              <?php } ?>
+              <?php if (isAdmin()) { ?>
+                <li class="nav-item">
+                  <a class="nav-link" href="admin/index.php">• Go au Back</a>
+                </li>
+              <?php } ?>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">

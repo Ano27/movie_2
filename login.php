@@ -51,7 +51,7 @@ include_once('inc/header.php');
   <input type="text" name="login" value="">
   <br>
   <label for="password">Mot de passe</label>
-  <input type="text" name="password" value="">
+  <input type="password" name="password" value="">
   <input class="" type="submit" name="submitted" value="Connexion">
 
 </form>
