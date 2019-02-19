@@ -56,14 +56,14 @@ if (!empty($_GET['email']) && !empty($_GET['token'])) {
 
 include_once('inc/header.php'); ?>
 
-<h1>Modifier votre mot de passe</h1>
+<h1><a href="index.php"></a> Modifier votre mot de passe</h1>
 <form class="" method="post">
   <label for="password">Mot de passe *</label>
   <span class="error"><?php if(!empty($error['password'])) { echo $error['password']; } ?></span>
-  <input type="text" name="password" value="">
+  <input type="password" name="password" value="">
   <br>
   <label for="password2">Mot de passe *</label>
-  <input type="text" name="password2" value="">
+  <input type="password" name="password2" value="">
 
   <input class="" type="submit" name="submitted" value="Go">
 </form>
