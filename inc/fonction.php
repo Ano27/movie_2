@@ -73,3 +73,8 @@ function isAdmin() {
   }
   return false;
 }
+function affiche($movie){
+
+	echo '<img class="image" src="posters/' . $movie['id'] . '.jpg" alt="' . $movie['title'] . '">';
+
+}
