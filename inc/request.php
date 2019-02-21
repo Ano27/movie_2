@@ -27,6 +27,7 @@ function searchMovies($search){
   $stmt->execute();
   return $stmt->fetchAll();
 }
+
 function getMovieById($id) {
 	global $pdo;
 	$sql = "SELECT * FROM movies_full
@@ -35,16 +36,17 @@ function getMovieById($id) {
 	$query->bindValue(':id',$id,PDO::PARAM_INT);
 	$query->execute();
 	$movie = $query->fetch();
-	  return $movie->fetch();
+	return $movie;
 
 }
-function  getMovieBySlug($slug){
+function getMovieBySlug($slug){
+	global $pdo;
 	$sql = "SELECT * FROM movies_full
           WHERE slug = :slug";
   $query = $pdo->prepare($sql);
   $query->bindValue(':slug',$slug,PDO::PARAM_STR);
   $query->execute();
-	  return $query->fetch();
+	return $query->fetch();
 }
 function leslog(){
 	$sql = 'SELECT pseudo, email ,createdat FROM famille_tbl';
