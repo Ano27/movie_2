@@ -38,7 +38,7 @@ $datas = array(
     <div class="affichefilm">
       <h2><?php echo $movie['title']; ?></h2>
       <h2 id="titrefilm"><a class="blanco" href="detail.php?id=<?php echo $movie['id']; ?>"></h2>
-      <?php affiche($movie)?>
+      <?php affichdeft($movie)?>
     </div>
   <?php endforeach ?>
   <div class="clear"></div>
