@@ -8,7 +8,9 @@ if(!empty($_GET['search']) && empty($_GET['submitted'])) {
 }else {
   die('404');
 }
-include('inc/header.php');
+include('inc/header.php'); ?>
+<a id="Retourhome" href="index.php">← Retour en arrière</a>
+<?php
 foreach ($movies as $movie) {
   echo '<h1>' . $movie['title'] . '</h1>';
   echo affiche($movie);
