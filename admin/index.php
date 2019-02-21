@@ -34,7 +34,7 @@ if (isAdmin()) {
        <td><?php echo $user['email']; ?></td>
        <td><?php echo $user['createdat']  ?></td>
        <td><?php echo $user['roles']  ?></td>
-       <td><a href="modifuseur.php?id=<?php echo $user['id']; ?>">Editer</a></td>
+       <td><a href="modifuseur.php?id=<?php echo $user['id']; ?>">Editer</a><a onclick="return confirm('voulez vous sup l utilisateur')" href="delete.php?id=<?php echo $user['id']; ?>">Delete</a></td>
      </tr>
   <?php endforeach ?>
 </table>
