@@ -29,9 +29,6 @@ if(!empty($_GET['slug'])) {
     die('404');
  }
 include('inc/header.php'); ?>
-<div class="wrap">
-
-
   <a id="Retourhome" href="index.php">← Retour en arrière</a>
 
   <h2 class="detailinfos">Titre : <?php echo $movie['title'] ?></h2>
@@ -40,5 +37,5 @@ include('inc/header.php'); ?>
   <h3 class="detailinfos">Réalisateur : <?php echo $movie['directors'] ?></h3>
   <h3 class="detailinfos">Note : <?php echo $movie['rating'] ?></h3>
 
-</div>
+  <a class="blanc red filmavoirdetail" href="filmavoir.php?slug=<?php echo $movie['slug']; ?>" title="Ajouter aux favoris"><i class="fas fa-heart"></i></a>
 <?php include('inc/footer.php');

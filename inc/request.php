@@ -60,3 +60,8 @@ function getAllUsers(){
 	$users = $query->fetchAll();
 	return $users;
 }
+
+// function ajoutFilmFavoris() {
+// 	global $pdo;
+// 	$sql = "INSERT INTO 'movies_full' ()"
+// }
