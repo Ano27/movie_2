@@ -54,7 +54,7 @@ function getMovieBySlug($slug){
 function getAllUsers(){
 	global $pdo;
 	$sql = "SELECT * FROM users
-					ORDER BY id DESC";
+					ORDER BY id ASC";
 	$query = $pdo->prepare($sql);
 	$query->execute();
 	$users = $query->fetchAll();

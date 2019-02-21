@@ -18,17 +18,47 @@ if (isAdmin()) {
 
 <div class="count">
   <h3>Les nouveau compte</h3>
+  <table>
+   <tr>
+      <th>Pseudo</th>
+      <th>Email</th>
+      <th>Date de creation</th>
+      <th>roles</th>
+      <th>Modifié/Supprimé</th>
+   </tr>
 
   <?php foreach ($users as $user): ?>
-    <div class="afficheuti">
-      <h2><?php echo $user['pseudo']; ?></h2>
-      <h2><?php echo $user['email']; ?></h2>
-      <h2><?php echo $user['createdat']  ?></h2>
-      <h2><?php echo $user['roles']  ?></h2>
-    </div>
+     <tr>
+
+       <td><?php echo $user['pseudo']; ?></td>
+       <td><?php echo $user['email']; ?></td>
+       <td><?php echo $user['createdat']  ?></td>
+       <td><?php echo $user['roles']  ?></td>
+
+       <td>
+         <a href="modifuseur.php?id=<?php echo $user['id']; ?>">Editer</a>
+         <a onclick="return confirm('Voulez vous effacer cet utilisateur');" href="delete.php?id=<?php echo $user['id']; ?>">delete </a>
+
+         <form  action="delete.php" method="post">
+            <input type="hidden" name="iduser" value="<?php echo $user['id']; ?>">
+            <input type="submit" name="submitted" value="delete">
+         </form>
+
+         <?php
+          // isAdmin()
+          // if form soumis
+          // name iduser => id du user
+          // // select pour verifier si cet user existe
+          // si il existe
+              // delete
+
+          ?>
+
+       </td>
+     </tr>
   <?php endforeach ?>
-
-
+</table>
+</div>
 
 <?php
 // --------------------------------------------------------------------------------
