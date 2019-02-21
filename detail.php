@@ -32,7 +32,7 @@ if(!empty($_GET['id']) && is_numeric($_GET['id'])) {
 include('inc/header.php'); ?>
 <div class="wrap">
   <h2>Titre : <?php echo $film['title'] ?></h2>
-  <p><?php affiche($film)?></p>
+  <p><?php affichdeft($film)?></p>
   <h3>Année : <?php echo $film['year'] ?></h3>
   <h3>Réalisateur : <?php echo $film['directors'] ?></h3>
   <h3>Note : <?php echo $film['rating'] ?></h3>
