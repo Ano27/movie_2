@@ -32,6 +32,7 @@ if(!empty($_GET['id']) && is_numeric($_GET['id'])) {
 include('inc/header.php'); ?>
 <div class="wrap">
 
+
   <a id="Retourhome" href="index.php">← Retour en arrière</a>
 
   <h2 class="detailinfos">Titre : <?php echo $movie['title'] ?></h2>

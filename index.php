@@ -4,18 +4,43 @@ include('inc/request.php');
 require('inc/fonction.php');
 
   $movies = getdscrition();
+
+$datas = array(
+  'Drama',
+  'Fantasy',
+  'Romance',
+  'Action',
+  'Thriller',
+  'Comedy',
+  'Adventure',
+  'Animation',
+  'Family',
+  'Sci-Fi',
+  'Mystery',
+  'Crime',
+  'Horror',
+  'Music',
+  'War',
+  'Biography',
+  'History',
+  'Documentary',
+  'Musical',
+  'Western',
+  'Sport',
+  'Short',
+  'Film-Noir',
+  'N/A',
+  'News',
+);
   include('inc/header.php');?>
 
   <?php foreach ($movies as $movie): ?>
-
     <div class="affichefilm">
-      <h2 id="titrefilm"><?php echo $movie['title']; ?></h2>
-      <h2><a class="blanco" href="detail.php?id=<?php echo $movie['id']; ?>"></h2>
+      <h2><?php echo $movie['title']; ?></h2>
+      <h2 id="titrefilm"><a class="blanco" href="detail.php?id=<?php echo $movie['id']; ?>"></h2>
       <?php affichdeft($movie)?>
     </div>
-
-
-  <?php endforeach; ?>
+  <?php endforeach ?>
   <a id="plusdefilm" href="index.php">« + de films ! »</a>
 
 <?php include('inc/footer.php');

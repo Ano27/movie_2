@@ -27,22 +27,24 @@ function searchMovies($search){
   $stmt->execute();
   return $stmt->fetchAll();
 }
-function getMovieById() {
+function getMovieById($id) {
 	global $pdo;
 	$sql = "SELECT * FROM movies_full
 					WHERE id = :id";
 	$query = $pdo->prepare($sql);
 	$query->bindValue(':id',$id,PDO::PARAM_INT);
 	$query->execute();
-	$movies = $query->fetch();
+	$movie = $query->fetch();
+	  return $movie->fetch();
 
 }
-function  getMovieBySlug(){
+function  getMovieBySlug($slug){
 	$sql = "SELECT * FROM movies_full
           WHERE slug = :slug";
   $query = $pdo->prepare($sql);
   $query->bindValue(':slug',$slug,PDO::PARAM_STR);
   $query->execute();
+	  return $query->fetch();
 }
 function leslog(){
 	$sql = 'SELECT pseudo, email ,createdat FROM famille_tbl';
