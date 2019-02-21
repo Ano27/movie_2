@@ -12,6 +12,9 @@ if (isAdmin()) {
 //traitement php
  include('inc/header.php'); ?>
 
+<div class="count">
+  <h3>Les nouveau compte</h3>
+</div>
 
 <?php
 // --------------------------------------------------------------------------------

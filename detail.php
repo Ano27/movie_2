@@ -31,20 +31,14 @@ if(!empty($_GET['id']) && is_numeric($_GET['id'])) {
  }
 include('inc/header.php'); ?>
 <div class="wrap">
-<<<<<<< HEAD
-  <h2>Titre : <?php echo $film['title'] ?></h2>
-  <p><?php affichdeft($film)?></p>
-  <h3>Année : <?php echo $film['year'] ?></h3>
-  <h3>Réalisateur : <?php echo $film['directors'] ?></h3>
-  <h3>Note : <?php echo $film['rating'] ?></h3>
-  <a href="index.php">Home</a>
-=======
+
   <a id="Retourhome" href="index.php">← Retour en arrière</a>
+
   <h2 class="detailinfos">Titre : <?php echo $movie['title'] ?></h2>
   <p id="affichedefilm"><?php affichdeft($movie)?></p>
   <h3 class="detailinfos">Année : <?php echo $movie['year'] ?></h3>
   <h3 class="detailinfos">Réalisateur : <?php echo $movie['directors'] ?></h3>
   <h3 class="detailinfos">Note : <?php echo $movie['rating'] ?></h3>
->>>>>>> b4559cb2d129aa1183fa01be9f63c7b5424daffc
+
 </div>
 <?php include('inc/footer.php');

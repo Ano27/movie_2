@@ -44,3 +44,6 @@ function  getMovieBySlug(){
   $query->bindValue(':slug',$slug,PDO::PARAM_STR);
   $query->execute();
 }
+function leslog(){
+	$sql = 'SELECT pseudo, email ,createdat FROM famille_tbl';
+}
