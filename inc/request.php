@@ -48,6 +48,12 @@ function getMovieBySlug($slug){
   $query->execute();
 	return $query->fetch();
 }
-function leslog(){
-	$sql = 'SELECT pseudo, email ,createdat FROM famille_tbl';
+function getAllUsers(){
+	global $pdo;
+	$sql = "SELECT * FROM users
+					ORDER BY id DESC";
+	$query = $pdo->prepare($sql);
+	$query->execute();
+	$users = $query->fetchAll();
+	return $users;
 }
