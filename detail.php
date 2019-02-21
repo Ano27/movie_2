@@ -2,8 +2,16 @@
 include('inc/pdo.php');
 include('inc/fonction.php');
 // title year directors rating
+// PROF =>  Faire avec le slug
 if(!empty($_GET['id']) && is_numeric($_GET['id'])) {
   $id = $_GET['id'];
+
+  ///////////////////////////
+  //    PROF
+  // Mettre request dans request.php
+  // en faire une en cherchant film à partir de id et une autre à par du slug
+  // ex: getMovieById() , getMovieBySlug() !!!!
+  //////////////////////
   $sql = "SELECT * FROM movies_full
           WHERE id = :id";
   $query = $pdo->prepare($sql);
