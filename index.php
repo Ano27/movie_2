@@ -41,12 +41,6 @@ $datas = array(
       <?php affichdeft($movie)?>
     </div>
   <?php endforeach ?>
-  <div class="clear"></div>
-  <?php foreach ($datas as $data): ?>
-    <label for=""><?php echo $data; ?></label>
-    <input type="checkbox" name="" value="">
-    <br>
-  <?php endforeach; ?>
   <a id="plusdefilm" href="index.php">« + de films ! »</a>
 
 <?php include('inc/footer.php');
