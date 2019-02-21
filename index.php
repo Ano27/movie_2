@@ -8,10 +8,9 @@ require('inc/fonction.php');
 
   <?php foreach ($movies as $movie): ?>
 
-
     <div class="affichefilm">
-      <h2><?php echo $movie['title']; ?></h2>
-      <h2 id="titrefilm"><a class="blanco" href="detail.php?id=<?php echo $movie['id']; ?>"></h2>
+      <h2 id="titrefilm"><?php echo $movie['title']; ?></h2>
+      <h2><a class="blanco" href="detail.php?id=<?php echo $movie['id']; ?>"></h2>
       <?php affichdeft($movie)?>
     </div>
 
