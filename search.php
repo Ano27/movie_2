@@ -13,6 +13,6 @@ include('inc/header.php'); ?>
 <?php
 foreach ($movies as $movie) {
   echo '<h1>' . $movie['title'] . '</h1>';
-  echo affiche($movie);
+  echo affichdeft($movie);
 }
 include('inc/footer.php');

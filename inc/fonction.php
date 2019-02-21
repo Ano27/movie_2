@@ -1,12 +1,13 @@
 <?php
 session_start();
-
+//------------------------------------------------------------------------------Fonction debug-------------------------------------------------------------------------------
 function debug($a)
 {
   echo '<pre>';
   print_r($a);
   echo '</pre>';
 }
+//------------------------------------------------------------------------------Creation Compte a dbb------------------------------------------------------------------------
 function createart($error,$value,$key,$min,$max,$text)
 {
   if (!empty($value))
@@ -26,6 +27,7 @@ function createart($error,$value,$key,$min,$max,$text)
 
     return $error;
 }
+//------------------------------------------------------------------------------Verification de compte email----------------------------------------------------------------
 function emailvalidation($error,$value,$key) {
   if (!empty($value)) {
     if (filter_var($value, FILTER_VALIDATE_EMAIL)) {
@@ -35,6 +37,7 @@ function emailvalidation($error,$value,$key) {
       }
   }
 }
+// -----------------------------------------------------------------------------Generateur de Token-------------------------------------------------------------------------
 function randomString() {
   $length = 16;
   $chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -46,6 +49,7 @@ function randomString() {
 
       return $str;
 }
+//------------------------------------------------------------------------------Fonction de connexion compte---------------------------------------------------------------
 function isLogged() {
   if (!empty($_SESSION['user']['id'])) {
     if (is_numeric($_SESSION['user']['id'])) {
@@ -64,7 +68,7 @@ function isLogged() {
   }
   return false;
 }
-
+//------------------------------------------------------------------------------Fonction administrateur--------------------------------------------------------------------
 function isAdmin() {
   if (isLogged()) {
     if ($_SESSION['user']['roles'] == 'SuperUser') {
@@ -73,8 +77,19 @@ function isAdmin() {
   }
   return false;
 }
-function affiche($movie){
+//------------------------------------------------------------------------------de coter mais a garder, ancienne affichage ------------------------------------------------
+// function affiche($movie){
+//
+// 	echo '<img class="image" src="posters/' . $movie['id'] . '.jpg" alt="' . $movie['title'] . '">';
+//
+// }
+// -----------------------------------------------------------------------------affichage Image + filtre d'image-----------------------------------------------------------
+function affichdeft($movie){
+  $filename = 'posters/' . $movie['id'] . '.jpg';
 
-	echo '<img class="image" src="posters/' . $movie['id'] . '.jpg" alt="' . $movie['title'] . '">';
-
+  if (file_exists($filename)) {
+      echo '<img class="image" src="posters/' . $movie['id'] . '.jpg" alt="' . $movie['title'] . '">';
+  } else {
+      echo '<img src="asset/img/téléchargement.jpg" alt="">';
+  }
 }
