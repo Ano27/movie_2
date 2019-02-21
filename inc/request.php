@@ -27,20 +27,36 @@ function searchMovies($search){
   $stmt->execute();
   return $stmt->fetchAll();
 }
-function getMovieById() {
+
+function getMovieById($id) {
 	global $pdo;
 	$sql = "SELECT * FROM movies_full
 					WHERE id = :id";
 	$query = $pdo->prepare($sql);
 	$query->bindValue(':id',$id,PDO::PARAM_INT);
 	$query->execute();
-	$movies = $query->fetch();
+	$movie = $query->fetch();
+	return $movie;
 
 }
-function  getMovieBySlug(){
+
+function getMovieBySlug($slug){
+	global $pdo;
 	$sql = "SELECT * FROM movies_full
           WHERE slug = :slug";
   $query = $pdo->prepare($sql);
   $query->bindValue(':slug',$slug,PDO::PARAM_STR);
   $query->execute();
+	$movie = $query->fetch();
+	return $movie;
+}
+
+function getAllUsers(){
+	global $pdo;
+	$sql = "SELECT * FROM users
+					ORDER BY id DESC";
+	$query = $pdo->prepare($sql);
+	$query->execute();
+	$users = $query->fetchAll();
+	return $users;
 }
