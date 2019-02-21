@@ -1,7 +1,9 @@
 @import "reset.css";
 
 body {
-  background-color: #262626;
+  /* background-color: #262626; */
+  background-image: url(https://thumbs.dreamstime.com/t/les-%C3%A9toiles-de-r%C3%A9sum%C3%A9-de-la-galaxie-volent-sur-le-fond-noir-plan-rapproch%C3%A9-97207551.jpg);
+  background-repeat:repeat;
 }
 
 .wrap{
@@ -34,6 +36,26 @@ margin-bottom: 50px;
   color: #000;
 }
 
+.jaune:hover {
+  color: yellow;
+}
+
+.orange:hover {
+  color: orange;
+}
+
+.bleu:hover {
+  color: blue;
+}
+
+.red:hover {
+  color: red;
+}
+
+.vert:hover {
+  color: green;
+}
+
 #titrelogo {
   font-size: 3em;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6db3f2+30,54a3ee+45,3690f0+52,1e69de+76 */
@@ -47,7 +69,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', end
 /* PARTIE FORMULAIRE */
 
 #formulaire {
-  background-color: #262626;
+  /* background-color: #262626; */
+  background-image: url(https://thumbs.dreamstime.com/t/les-%C3%A9toiles-de-r%C3%A9sum%C3%A9-de-la-galaxie-volent-sur-le-fond-noir-plan-rapproch%C3%A9-97207551.jpg);
+  background-repeat:repeat;
   margin-top: 50px;
 }
 
@@ -116,7 +140,9 @@ text-align: center;
 }
 
 .affichefilm {
-  background-color: #262626;
+  /* background-color: #262626; */
+  background-image: url(https://thumbs.dreamstime.com/t/les-%C3%A9toiles-de-r%C3%A9sum%C3%A9-de-la-galaxie-volent-sur-le-fond-noir-plan-rapproch%C3%A9-97207551.jpg);
+  background-repeat:repeat;
   float: left;
   width: 33.333333333333%;
   padding: 20px;
@@ -125,6 +151,11 @@ text-align: center;
   color: white;
   text-decoration: none;
   font-size: 2em;
+}
+
+#afficherecherche {
+  display: block;
+  text-align: center;
 }
 
 /* DETAIL */
@@ -147,6 +178,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
 }
 
 #affichedefilm {
+  display: block;
+  text-align: center;
+}
+
+.filmavoirdetail{
+  font-size: 2.5em;
   display: block;
   text-align: center;
 }

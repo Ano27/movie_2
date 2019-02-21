@@ -59,6 +59,7 @@ if (isAdmin()) {
        <td><?php echo $user['email']; ?></td>
        <td><?php echo $user['createdat']  ?></td>
        <td><?php echo $user['roles']  ?></td>
+<<<<<<< HEAD
        <td>
          <a href="modifuseur.php?id=<?php echo $user['id']; ?>">Editer</a>
          <form  onsubmit="return confirm('Do you really want to submit the form?');" action="delete.php" method="post">
@@ -92,6 +93,29 @@ if (isAdmin()) {
        <td><?php echo $movie['year']  ?></td>
        <td><?php echo $movie['genres']  ?></td>
        <td><?php echo $movie['created']  ?></td>
+=======
+
+       <td>
+         <a href="modifuseur.php?id=<?php echo $user['id']; ?>">Editer</a>
+         <a onclick="return confirm('Voulez vous effacer cet utilisateur');" href="delete.php?id=<?php echo $user['id']; ?>">delete </a>
+
+         <form  action="delete.php" method="post">
+            <input type="hidden" name="iduser" value="<?php echo $user['id']; ?>">
+            <input type="submit" name="submitted" value="delete">
+         </form>
+
+         <?php
+          // isAdmin()
+          // if form soumis
+          // name iduser => id du user
+          // // select pour verifier si cet user existe
+          // si il existe
+              // delete
+
+          ?>
+
+       </td>
+>>>>>>> 3480d99658ec9a2abf70f0e486c7e7675e8cf945
      </tr>
   <?php endforeach ?>
 </table>

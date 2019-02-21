@@ -11,8 +11,9 @@ if(!empty($_GET['search']) && empty($_GET['submitted'])) {
 include('inc/header.php'); ?>
 <a id="Retourhome" href="index.php">← Retour en arrière</a>
 <?php
-foreach ($movies as $movie) {
-  echo '<h1>' . $movie['title'] . '</h1>';
-  echo affichdeft($movie);
+foreach ($movies as $movie) { ?>
+  <h1 id=titrefilm><?php echo $movie['title'] ?></h1>
+  <a id="afficherecherche" href="detail.php?slug=<?php echo $movie['slug']; ?>"><?php echo affichdeft($movie) ?></a>
+<?php
 }
 include('inc/footer.php');

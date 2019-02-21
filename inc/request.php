@@ -60,6 +60,7 @@ function getAllUsers(){
 	$users = $query->fetchAll();
 	return $users;
 }
+
 function getAlldscrition() {
 	global $pdo;
 	$sql = "SELECT * FROM movies_full
@@ -78,3 +79,9 @@ function countFilms()
  $totalItems = $query->fetchColumn();
  return $totalItems;
 }
+
+
+// function ajoutFilmFavoris() {
+// 	global $pdo;
+// 	$sql = "INSERT INTO 'movies_full' ()"
+// }
