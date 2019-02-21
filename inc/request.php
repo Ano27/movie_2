@@ -7,15 +7,7 @@ function countFilms(){
 	$totalFilms = $query->fetchColumn();
 	return $totalFilms;
 }
-function getArticleById($id) {
-  global $pdo;
-    $sql = "SELECT * FROM articles WHERE id = :id";
-    $query = $pdo->prepare($sql);
-  $query->bindValue(':id',$id,PDO::PARAM_INT);
-    $query->execute();
-    $data = $query->fetch();
-    return $data;
-}
+
 function getdscrition() {
 	global $pdo;
 	$sql = "SELECT * FROM movies_full
@@ -34,4 +26,21 @@ function searchMovies($search){
   $stmt->bindValue(':search','%'.$search.'%', PDO::PARAM_STR);
   $stmt->execute();
   return $stmt->fetchAll();
+}
+function getMovieById() {
+	global $pdo;
+	$sql = "SELECT * FROM movies_full
+					WHERE id = :id";
+	$query = $pdo->prepare($sql);
+	$query->bindValue(':id',$id,PDO::PARAM_INT);
+	$query->execute();
+	$movies = $query->fetch();
+
+}
+function  getMovieBySlug(){
+	$sql = "SELECT * FROM movies_full
+          WHERE slug = :slug";
+  $query = $pdo->prepare($sql);
+  $query->bindValue(':slug',$slug,PDO::PARAM_STR);
+  $query->execute();
 }
