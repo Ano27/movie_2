@@ -18,17 +18,27 @@ if (isAdmin()) {
 
 <div class="count">
   <h3>Les nouveau compte</h3>
+  <table>
+   <tr>
+      <th>Pseudo</th>
+      <th>Email</th>
+      <th>Date de creation</th>
+      <th>roles</th>
+      <th>Modifié/Supprimé</th>
+   </tr>
 
   <?php foreach ($users as $user): ?>
-    <div class="afficheuti">
-      <h2><?php echo $user['pseudo']; ?></h2>
-      <h2><?php echo $user['email']; ?></h2>
-      <h2><?php echo $user['createdat']  ?></h2>
-      <h2><?php echo $user['roles']  ?></h2>
-    </div>
+     <tr>
+
+       <td><?php echo $user['pseudo']; ?></td>
+       <td><?php echo $user['email']; ?></td>
+       <td><?php echo $user['createdat']  ?></td>
+       <td><?php echo $user['roles']  ?></td>
+       <td><a href="modifuseur.php?id=<?php echo $user['id']; ?>">Editer</a></td>
+     </tr>
   <?php endforeach ?>
-
-
+</table>
+</div>
 
 <?php
 // --------------------------------------------------------------------------------
