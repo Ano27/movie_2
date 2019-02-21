@@ -6,20 +6,7 @@ include('inc/request.php');
 // PROF =>  Faire avec le slug
 if(!empty($_GET['slug'])) {
   $slug = $_GET['slug'];
-
-  ///////////////////////////
-  //    PROF
-  // Mettre request dans request.php
-  // en faire une en cherchant film à partir de id et une autre à par du slug
-  // ex: getMovieById() , getMovieBySlug() !!!!
-  //////////////////////
   $movie = getMovieBySlug($slug);
-  // $sql = "SELECT * FROM movies_full
-  //         WHERE slug = :slug";
-  // $query = $pdo->prepare($sql);
-  // $query->bindValue(':slug',$slug,PDO::PARAM_STR);
-  // $query->execute();
-	// $movie = $query->fetch();
   if (!empty($movie)) {
 
   } else {
