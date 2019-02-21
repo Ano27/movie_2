@@ -54,7 +54,7 @@ include_once('inc/header.php');
     <label id="label" for="password">• Mot de passe *</label>
     <input class="form-control" type="password" name="password" value="" placeholder="Le mot de passe">
   </div>
-  <a id="motdepasseoublier" href="forgetpassword.php">Mot de passe oublié</a> <br>
+  <a id="motdepasseoublier" href="forgetpassword.php">Mot de passe oublié ?</a> <br>
   <input id="boutoninscription" class="btn btn-primary" type="submit" name="submitted" value="Connexion">
 </form>
 

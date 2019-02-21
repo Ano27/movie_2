@@ -1,7 +1,9 @@
 @import "reset.css";
 
 body {
-  background-color: #262626;
+  /* background-color: #262626; */
+  background-image: url(https://www.leshouches.fr/wp-content/uploads/2015/10/cin%C3%A9ma.jpg);
+  background-repeat:repeat;
 }
 
 .wrap{

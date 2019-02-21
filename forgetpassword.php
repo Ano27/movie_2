@@ -33,11 +33,13 @@ if (!empty($_POST['submitted'])) {
 
 
 include_once('inc/header.php'); ?>
-<form class="" method="post">
-  <label for="email">Email *</label>
-  <span class="error"><?php if(!empty($error['email'])) { echo $error['email']; } ?></span>
-  <input type="text" name="email" value="<?php if(!empty($_POST['email'])) { echo $_POST['email']; } ?>">
-  <br>
-  <input class="" type="submit" name="submitted" value="Connexion">
+<a id="Retourhome" href="index.php">← Retour en arrière</a>
+<form id="formulaire" class="" method="post">
+  <div class="form-group">
+    <label id="label" for="email">• Email *</label>
+    <input type="text" class="form-control" name="email" value="<?php if(!empty($_POST['email'])) { echo $_POST['email']; } ?>"placeholder="Ex: bob@gmail.com">
+    <span class="error" style="color:red"><?php if(!empty($error['email'])) { echo $error['email']; } ?></span>
+  </div>
+  <input class="btn btn-primary" type="submit" name="submitted" value="Envoyer">
 </form>
 <?php include_once('inc/footer.php');
