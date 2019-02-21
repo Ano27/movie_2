@@ -1,6 +1,7 @@
 <?php
 include('inc/pdo.php');
 include('inc/fonction.php');
+include('inc/request.php');
 // title year directors rating
 // PROF =>  Faire avec le slug
 if(!empty($_GET['slug'])) {
@@ -13,6 +14,12 @@ if(!empty($_GET['slug'])) {
   // ex: getMovieById() , getMovieBySlug() !!!!
   //////////////////////
   $movie = getMovieBySlug($slug);
+  // $sql = "SELECT * FROM movies_full
+  //         WHERE slug = :slug";
+  // $query = $pdo->prepare($sql);
+  // $query->bindValue(':slug',$slug,PDO::PARAM_STR);
+  // $query->execute();
+	// $movie = $query->fetch();
   if (!empty($movie)) {
 
   } else {
