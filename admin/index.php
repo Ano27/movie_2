@@ -3,7 +3,8 @@ include('../inc/fonction.php');
 // --------------------------------------------------------------------------------
 //PDO => connexion base de donne
 include('../inc/pdo.php');
- $users = acount();
+include('../inc/request.php');
+ $users = getAllUsers();
 if (isAdmin()) {
   //
 }else {

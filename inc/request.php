@@ -46,14 +46,12 @@ function  getMovieBySlug($slug){
   $query->execute();
 	  return $query->fetch();
 }
-function acount(){
+function getAllUsers(){
 	global $pdo;
 	$sql = "SELECT * FROM users
-					ORDER BY RAND()
-					LIMIT 6";
+					ORDER BY id DESC";
 	$query = $pdo->prepare($sql);
 	$query->execute();
 	$users = $query->fetchAll();
-		return $users;
-
+	return $users;
 }
