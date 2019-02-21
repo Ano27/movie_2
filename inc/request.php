@@ -61,6 +61,26 @@ function getAllUsers(){
 	return $users;
 }
 
+function getAlldscrition() {
+	global $pdo;
+	$sql = "SELECT * FROM movies_full
+	        ORDER BY created	ASC";
+	$query = $pdo->prepare($sql);
+	$query->execute();
+	$movies = $query->fetchAll();
+	  return $movies;
+}
+function countFilms()
+{
+ global $pdo;
+ $sql = "SELECT COUNT(id) FROM movies_full";
+ $query = $pdo->prepare($sql);
+ $query->execute();
+ $totalItems = $query->fetchColumn();
+ return $totalItems;
+}
+
+
 // function ajoutFilmFavoris() {
 // 	global $pdo;
 // 	$sql = "INSERT INTO 'movies_full' ()"
