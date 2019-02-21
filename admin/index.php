@@ -34,6 +34,7 @@ if (isAdmin()) {
        <td><?php echo $user['email']; ?></td>
        <td><?php echo $user['createdat']  ?></td>
        <td><?php echo $user['roles']  ?></td>
+
        <td>
          <a href="modifuseur.php?id=<?php echo $user['id']; ?>">Editer</a>
          <a onclick="return confirm('Voulez vous effacer cet utilisateur');" href="delete.php?id=<?php echo $user['id']; ?>">delete </a>
@@ -49,7 +50,7 @@ if (isAdmin()) {
           // name iduser => id du user
           // // select pour verifier si cet user existe
           // si il existe
-              // delete 
+              // delete
 
           ?>
 
