@@ -43,7 +43,8 @@
                   </li>
                 <?php } ?>
                 <li class="nav-item">
-                  <p class="blanc filtre">Filtre</p>
+                  <!-- <p class="blanc filtre">Filtre</p> -->
+                  <a class="blanc filtre" href="#">Filtre</a>
                 </li>
                 <li class="nav-item">
                   <p><?php echo 'Bonjour'.' '. $_SESSION['user']['pseudo']; ?></p>
@@ -63,7 +64,7 @@
           <ul>
             <form class="" method="post" action="">
 
-              <select name="popularity">
+              <select class="year"name="popularity">
                 <option value="">--Popularity--</option>
                 <option value="0-20">0-20</option>
                 <option value="21-40">21-40</option>
@@ -72,19 +73,20 @@
                 <option value="81-100">81-100</option>
               </select>
               <br>
-              <select name="year">
+              <select class="year"name="year">
                 <option value="">--Year--</option>
                 <option value="1801-1900">1801-1900</option>
                 <option value="1901-1950">1901-1950</option>
                 <option value="1951-2000">1951-2000</option>
                 <option value="2001-2019">2001-2019</option>
               </select>
-          <?php foreach ($datas as $data): ?>
-              <label for=""><?php echo $data ?></label>
-              <input type="checkbox" name="cat[]" value="<?php echo $data ?>">
               <br>
+          <?php foreach ($datas as $data): ?>
+              <div class="genres">
+                <label for=""><?php echo $data ?></label>
+                <input type="checkbox" name="cat[]" value="<?php echo $data ?>">
+              </div>
           <?php endforeach; ?>
-          <?php //debug($datas); ?>
               <input type="submit" name="submitted" value="Filtre">
             </form>
           </ul>

@@ -22,6 +22,12 @@ body {
   z-index: 99;
   display: none;
 }
+.genres {
+  float: left;
+  font-size: 1.3em;
+}
+.genres label {margin-left: 40px;padding: 10px 0px;}
+.year{padding: 5px;margin-top: 10px;margin-left: 40px;}
 #nav{
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4c4c4c+0,595959+12,666666+25,474747+39,2c2c2c+50,000000+51,111111+60,2b2b2b+76,1c1c1c+91,131313+100;Black+Gloss+%231 */
 background: rgb(76,76,76); /* Old browsers */
