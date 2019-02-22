@@ -22,8 +22,12 @@ if (isAdmin()) {
 //traitement php
  include('inc/header.php');
  ?>
+ <div class="lien">
+
    <a href="lesuser.php">Gestion des utilisateur</a>
+   <br>
    <a href="gestfilm.php">Gestion des film</a>
+ </div>
 
    <h2>Les Statistique</h2>
 
