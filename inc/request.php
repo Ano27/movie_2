@@ -7,6 +7,7 @@ function countFilms(){
 	$totalFilms = $query->fetchColumn();
 	return $totalFilms;
 }
+
 function getdscrition() {
 	global $pdo;
 	$sql = "SELECT * FROM movies_full
@@ -97,6 +98,7 @@ function countUser(){
 	$totalFilms = $query->fetchColumn();
 	return $totalFilms;
 }
+
 // function statfilm() {
 // 	global $pdo;
 // 	$sql = "SELECT 	* FROM movies_full

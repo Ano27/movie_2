@@ -7,12 +7,27 @@ include('../inc/fonction.php');
 include('../inc/pdo.php');
 include('../inc/request.php');
 
-$users = getAllUsers();
+// $users = getAllUsers();
 
 
 
 
 
+$totalItems = countUser();
+$itemsPerPage = 10;
+$currentPage = 1;
+$offset = 0;
+$urlPattern = '?page=(:num)';
+if(!empty($_GET['page'])) {
+ $currentPage = $_GET['page'];
+ $offset = ($currentPage - 1) * $itemsPerPage;
+}
+$sql = "SELECT * FROM users
+       LIMIT $itemsPerPage OFFSET $offset";
+$query = $pdo->prepare($sql);
+$query->execute();
+$users = $query->fetchAll();
+$paginator = new Paginator($totalItems, $itemsPerPage, $currentPage, $urlPattern);
 
 
 
@@ -37,7 +52,7 @@ if (isAdmin()) {
    </tr>
 
   <?php
-
+    echo $paginator;
     foreach ($users as $user):
   ?>
      <tr>
@@ -58,5 +73,5 @@ if (isAdmin()) {
   <?php endforeach ?>
 </table>
 </div>
-<?php 
+<?php
   include('inc/footer.php');
