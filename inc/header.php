@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="asset/css/style.css">
   </head>
   <body>
-    <header>
+    <header id="header">
 
 
       <nav id="nav" class="navbar navbar-expand-lg navbar-dark ">
@@ -43,6 +43,9 @@
                   </li>
                 <?php } ?>
                 <li class="nav-item">
+                  <p class="blanc filtre">Filtre</p>
+                </li>
+                <li class="nav-item">
                   <p><?php echo 'Bonjour'.' '. $_SESSION['user']['pseudo']; ?></p>
                 </li>
               <?php } ?>
@@ -54,8 +57,37 @@
             <button class="btn btn-outline-success my-2 my-sm-0" name="submitted" type="submit"><i class="fas fa-search"></i></button>
           </form>
         </div>
+
       </nav>
+        <div class="menufiltre">
+          <ul>
+            <form class="" method="post" action="">
 
-
+              <select name="popularity">
+                <option value="">--Popularity--</option>
+                <option value="0-20">0-20</option>
+                <option value="21-40">21-40</option>
+                <option value="41-60">41-60</option>
+                <option value="61-80">61-80</option>
+                <option value="81-100">81-100</option>
+              </select>
+              <br>
+              <select name="year">
+                <option value="">--Year--</option>
+                <option value="1801-1900">1801-1900</option>
+                <option value="1901-1950">1901-1950</option>
+                <option value="1951-2000">1951-2000</option>
+                <option value="2001-2019">2001-2019</option>
+              </select>
+          <?php foreach ($datas as $data): ?>
+              <label for=""><?php echo $data ?></label>
+              <input type="checkbox" name="cat[]" value="<?php echo $data ?>">
+              <br>
+          <?php endforeach; ?>
+          <?php //debug($datas); ?>
+              <input type="submit" name="submitted" value="Filtre">
+            </form>
+          </ul>
+        </div>
     </header>
     <div class="wrap">

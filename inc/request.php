@@ -7,7 +7,6 @@ function countFilms(){
 	$totalFilms = $query->fetchColumn();
 	return $totalFilms;
 }
-
 function getdscrition() {
 	global $pdo;
 	$sql = "SELECT * FROM movies_full
@@ -18,7 +17,6 @@ function getdscrition() {
 	$movies = $query->fetchAll();
 	  return $movies;
 }
-
 function searchMovies($search){
   global $pdo;
   $sql = "SELECT * FROM movies_full WHERE title LIKE :search OR cast LIKE :search OR directors LIKE :search";
@@ -27,7 +25,6 @@ function searchMovies($search){
   $stmt->execute();
   return $stmt->fetchAll();
 }
-
 function getMovieById($id) {
 	global $pdo;
 	$sql = "SELECT * FROM movies_full
@@ -37,9 +34,7 @@ function getMovieById($id) {
 	$query->execute();
 	$movie = $query->fetch();
 	return $movie;
-
 }
-
 function getMovieBySlug($slug){
 	global $pdo;
 	$sql = "SELECT * FROM movies_full
@@ -50,7 +45,6 @@ function getMovieBySlug($slug){
 	$movie = $query->fetch();
 	return $movie;
 }
-
 function getAllUsers(){
 	global $pdo;
 	$sql = "SELECT * FROM users
@@ -60,7 +54,6 @@ function getAllUsers(){
 	$users = $query->fetchAll();
 	return $users;
 }
-
 function getAlldscrition() {
 	global $pdo;
 	$sql = "SELECT * FROM movies_full
@@ -70,17 +63,6 @@ function getAlldscrition() {
 	$movies = $query->fetchAll();
 	  return $movies;
 }
-function countFilms()
-{
- global $pdo;
- $sql = "SELECT COUNT(id) FROM movies_full";
- $query = $pdo->prepare($sql);
- $query->execute();
- $totalItems = $query->fetchColumn();
- return $totalItems;
-}
-
-
 // function ajoutFilmFavoris() {
 // 	global $pdo;
 // 	$sql = "INSERT INTO 'movies_full' ()"

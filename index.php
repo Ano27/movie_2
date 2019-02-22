@@ -102,9 +102,9 @@ $datas = array(
       <br>
       <select name="year">
         <option value="">--Year--</option>
-        <option value="1700-1800">1700-1800</option>
         <option value="1801-1900">1801-1900</option>
-        <option value="1901-2000">1901-2000</option>
+        <option value="1901-1950">1901-1950</option>
+        <option value="1951-2000">1951-2000</option>
         <option value="2001-2019">2001-2019</option>
       </select>
   <?php foreach ($datas as $data): ?>
