@@ -147,7 +147,6 @@ margin-bottom: 20px;
 padding: 10px;
 text-align: center;
 }
-
 /* IMAGE */
 .image {
   margin-bottom: 20px;
@@ -160,17 +159,19 @@ text-align: center;
   float: left;
   width: 33.333333333333%;
   padding: 20px;
+  height: 500px;
 }
 .affichefilm h2 {
   color: white;
   text-decoration: none;
   font-size: 2em;
+  width: 100%;
 }
-
-#afficherecherche {
+.afficheposter {text-align: center;}
+/* #afficherecherche {
   display: block;
   text-align: center;
-}
+} */
 
 /* DETAIL */
 

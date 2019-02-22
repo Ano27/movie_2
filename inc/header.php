@@ -62,7 +62,7 @@
       </nav>
         <div class="menufiltre">
           <ul>
-            <form class="" method="post" action="">
+            <form class="" method="post" action="index.php">
 
               <select class="year"name="popularity">
                 <option value="">--Popularity--</option>
@@ -81,6 +81,33 @@
                 <option value="2001-2019">2001-2019</option>
               </select>
               <br>
+              <?php $datas = array(
+                'Drama',
+                'Fantasy',
+                'Romance',
+                'Action',
+                'Thriller',
+                'Comedy',
+                'Adventure',
+                'Animation',
+                'Family',
+                'Sci-Fi',
+                'Mystery',
+                'Crime',
+                'Horror',
+                'Music',
+                'War',
+                'Biography',
+                'History',
+                'Documentary',
+                'Musical',
+                'Western',
+                'Sport',
+                'Short',
+                'Film-Noir',
+                'N/A',
+                'News',
+              ); ?>
           <?php foreach ($datas as $data): ?>
               <div class="genres">
                 <label for=""><?php echo $data ?></label>
