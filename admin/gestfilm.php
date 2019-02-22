@@ -8,12 +8,12 @@ include('../inc/pdo.php');
 include('../inc/request.php');
 
 
-$movies= getAllAdmin();
+//$movies= getAllAdmin();
 
 
 
 $totalItems = countFilms();
-$itemsPerPage = 5;
+$itemsPerPage = 30;
 $currentPage = 1;
 $offset = 0;
 $urlPattern = '?page=(:num)';
@@ -25,7 +25,7 @@ $sql = "SELECT * FROM movies_full
        LIMIT $itemsPerPage OFFSET $offset";
 $query = $pdo->prepare($sql);
 $query->execute();
-$films = $query->fetchAll();
+$movies = $query->fetchAll();
 $paginator = new Paginator($totalItems, $itemsPerPage, $currentPage, $urlPattern);
 
 if (isAdmin()) {
@@ -38,10 +38,11 @@ if (isAdmin()) {
  include('inc/header.php');
  ?>
  <div class="count">
-
+<a href="ajoutmovie.php">Ajouter un film</a>
    <h1>Les film</h1>
    <table>
     <tr>
+      <th>Numero pour affiche</th>
        <th>Film</th>
        <th>Auteur</th>
        <th>Date de production</th>
@@ -54,7 +55,7 @@ if (isAdmin()) {
    foreach ($movies as $movie):
       ?>
       <tr>
-
+        <td><?php echo $movie['id']; ?></td>
         <td><?php echo $movie['title']; ?></td>
         <td><?php echo $movie['directors']; ?></td>
         <td><?php echo $movie['year']  ?></td>
@@ -65,10 +66,10 @@ if (isAdmin()) {
 
 
       </tr>
-  
+
    <?php  endforeach  ?>
  </table>
- <a href="ajoutmovie.php">Ajouter un film</a>
+ <a href="ajoutmovie.php">Ajouter un film</a><a href="ajoutmovie.php">Ajouter un film</a>
  </div>
  <?php
  // --------------------------------------------------------------------------------

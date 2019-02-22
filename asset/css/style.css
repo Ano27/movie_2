@@ -44,7 +44,6 @@ margin-bottom: 50px;position: relative;
   text-decoration: none;
   font-size: 1.2em;
 }
-
 .blanc:hover {
   text-decoration: none;
   color: #000;
@@ -136,8 +135,9 @@ border-radius: 50px;
 padding: 10px;
 text-transform: uppercase;
 text-decoration: none;
-}
 
+}
+.centerbutton {text-align: center;margin-top: 20px;padding-bottom: 50px;}
 #plusdefilm:hover {
   background-color: #1A7CDB;
 }
@@ -213,7 +213,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
   display: block;
   text-align: center;
 }
-
 /* RETOUR HOME */
 #Retourhome {
   font-size: 2em;
@@ -224,6 +223,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
 
 #Retourhome:hover {
   color: rgb(109,179,242);
+<<<<<<< HEAD
 }
 
 /* TABLEAU FAVORIS */
@@ -253,4 +253,6 @@ td {
 
 #supprimerlisteavoir:hover {
   color: darkred;
+=======
+>>>>>>> 0507968526e1b1014d4909fc9a77073be73ddd19
 }

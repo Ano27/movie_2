@@ -63,7 +63,8 @@ if(!empty($_POST['year'])) {
     </div>
   <?php endforeach ?>
   <div class="clear"></div>
-  <a id="plusdefilm" href="index.php">« + de films ! »</a>
-
+  <div class="centerbutton">
+    <a id="plusdefilm" href="index.php">« + de films ! »</a>
+  </div>
 
 <?php include('inc/footer.php');
