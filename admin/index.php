@@ -1,5 +1,6 @@
 <?php
-
+require '../vendor/autoload.php';
+use JasonGrimes\Paginator;
 include('../inc/fonction.php');
 // --------------------------------------------------------------------------------
 //PDO => connexion base de donne
@@ -10,6 +11,9 @@ $users = countUser();
 $movies= countFilms();
 $statfilms= getAlldscrition();
 $statusers=getAllUsers();
+
+
+
 
 if (isAdmin()) {
   //
@@ -50,6 +54,7 @@ if (isAdmin()) {
        <th>La date d ajouts</th>
     </tr>
     <?php
+  
     foreach ($statfilms as $statfilm):
 
        ?>
