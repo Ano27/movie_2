@@ -61,7 +61,16 @@ function getAllUsers(){
 	$users = $query->fetchAll();
 	return $users;
 }
-
+function getAllAdmin() {
+	global $pdo;
+	$sql = "SELECT * FROM movies_full
+	        ORDER BY title	ASC
+					LIMIT 100";
+	$query = $pdo->prepare($sql);
+	$query->execute();
+	$movies = $query->fetchAll();
+	  return $movies;
+}
 function getAlldscrition() {
 	global $pdo;
 	$sql = "SELECT * FROM movies_full

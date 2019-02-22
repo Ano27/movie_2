@@ -8,12 +8,14 @@ include('../inc/pdo.php');
 include('../inc/request.php');
 
 
-$movies= getAlldscrition();
+$movies= getAllAdmin();
+
 
 
 $totalItems = countFilms();
 $itemsPerPage = 5;
 $currentPage = 1;
+$offset = 0;
 $urlPattern = '?page=(:num)';
 if(!empty($_GET['page'])) {
  $currentPage = $_GET['page'];
@@ -63,8 +65,10 @@ if (isAdmin()) {
 
 
       </tr>
-   <?php endforeach ?>
+  
+   <?php  endforeach  ?>
  </table>
+ <a href="ajoutmovie.php">Ajouter un film</a>
  </div>
  <?php
  // --------------------------------------------------------------------------------
