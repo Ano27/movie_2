@@ -53,9 +53,13 @@ if(!empty($_POST['year'])) {
   include('inc/header.php');?>
   <?php foreach ($movies as $movie): ?>
     <div class="affichefilm">
-      <h2 id="titrefilm"><?php echo $movie['title']; ?></h2>
-      <h2><a class="blanco" href="detail.php?slug=<?php echo $movie['slug']; ?>"></h2>
-      <div class="afficheposter"><?php affichdeft($movie)?></div>
+      <h2 id="titrefilm"><a class="blancotitre" href="detail.php?slug=<?php echo $movie['slug']; ?>">
+        <?php echo $movie['title']; ?>
+      </a>
+      </h2>
+
+      <div class="afficheposter"><a class="blancotitre" href="detail.php?slug=<?php echo $movie['slug']; ?>">
+        <?php affichdeft($movie)?></a></div>
     </div>
   <?php endforeach ?>
   <div class="clear"></div>
