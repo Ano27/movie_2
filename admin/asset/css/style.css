@@ -6,7 +6,7 @@ body {
 
 .wrap{
   width: 100%;
-  max-width: 1150px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -116,17 +116,33 @@ text-align: center;
   width: 25%;
   padding: 20px;
 }
-.count table{
+.lien {
+
+  text-align: center;
+}
+.lien a{
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  
+}
+h2{
+  text-align: center;
+  font-size: 2.3em;
+}
+ table{
   border: solid 2px black;
+  margin:10px auto;
 }
 
-.count table tr th {
+ table tr th {
   padding-left: 25px;
   font-size: 1.5em;
   text-align: center;
   border: solid 2px black;
 }
-.count table tr td {
+ table tr td {
   font-size: 1.2em;
   padding: 10px 15px;
   text-align:center;

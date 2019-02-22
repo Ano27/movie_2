@@ -88,32 +88,6 @@ $datas = array(
   <?php endforeach ?>
   <div class="clear"></div>
   <a id="plusdefilm" href="index.php">« + de films ! »</a>
-  <div class="clear"></div>
-    <form class="" method="post" action="">
-
-      <select name="popularity">
-        <option value="">--Popularity--</option>
-        <option value="0-20">0-20</option>
-        <option value="21-40">21-40</option>
-        <option value="41-60">41-60</option>
-        <option value="61-80">61-80</option>
-        <option value="81-100">81-100</option>
-      </select>
-      <br>
-      <select name="year">
-        <option value="">--Year--</option>
-        <option value="1801-1900">1801-1900</option>
-        <option value="1901-1950">1901-1950</option>
-        <option value="1951-2000">1951-2000</option>
-        <option value="2001-2019">2001-2019</option>
-      </select>
-  <?php foreach ($datas as $data): ?>
-      <label for="" style="color:white;"><?php echo $data ?></label>
-      <input type="checkbox" name="cat[]" value="<?php echo $data ?>">
-      <br>
-  <?php endforeach; ?>
-  <?php //debug($datas); ?>
-      <input type="submit" name="submitted" value="Filtre">
-    </form>
+  
 
 <?php include('inc/footer.php');
