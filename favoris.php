@@ -9,23 +9,33 @@ require('inc/fonction.php');?>
 // REQUEST
 if (isLogged()) {
   $id_user = $_SESSION['user']['id'];
-  $datas = voirFilmFavoris($id_user);
+  $aVoirs = voirFilmFavoris($id_user);
+
 }else {
   die('403');
 }
 ?>
 
 <?php include('inc/header.php'); ?>
-<table style="width:100%">
+<a id="Retourhome" href="index.php">← Retour en arrière</a>
+<table style="width:80%">
   <tr>
-    <th>title</th>
+    <th>Titre</th>
     <th>Actions</th>
   </tr>
-  <?php foreach ($datas as $data) {
+  <?php foreach ($aVoirs as $aVoir) {
     echo '<tr>';
-      echo '<td>' . $data['title'] . '</td>';
-    echo '</tr>';
-  } ?>
-  </table>
+      echo '<td>' . $aVoir['titre'] . '</td>';
+      echo '<td>'. '<a id="supprimerlisteavoir" href="supprimerlisteavoir.php?id='.$aVoir['idnote'].'">'. '<i title="Supprimer de ma liste" class="fas fa-times"></i>' .'</a>'.'</td>';
+    echo '</tr>'; ?>
+    <!-- <form class="" action="" method="post">
+      <select class="" name="note">
+
+      </select>
+      <input type="hidden" name="movieid" value="<?php echo $aVoir['id'] ?>">
+      <input type="submit" name="submitted" value="Notez">
+    </form> -->
+  <?php } ?>
+</table>
 
 <?php include('inc/footer.php');

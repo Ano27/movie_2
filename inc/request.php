@@ -108,15 +108,33 @@ function countUser(){
 // 	  return $movies;
 // }
 
-function voirFilmFavoris($user_id) {
+function voirFilmFavoris($id_user) {
 	global $pdo;
-	$sql = "SELECT f.id AS idnote, m.title AS title,m.id AS id, m.year FROM favoris AS f
+	$sql = "SELECT f.id AS idnote, m.title AS titre,m.id AS id, m.year FROM favoris AS f
 				LEFT JOIN movies_full AS m
 				ON f.movie_id = m.id
-				WHERE user_id = $user_id";
+				WHERE user_id = $id_user";
 
 	$query = $pdo->prepare($sql);
 	$query->execute();
 	$results = $query->fetchAll();
 	return $results;
+}
+
+function selectsupprimerlisteavoir($id_user) {
+	global $pdo;
+	$sql = "SELECT * FROM favoris WHERE id = :id";
+  $query = $pdo->prepare($sql);
+  $query->bindValue(':id',$id_user,PDO::PARAM_INT);
+  $query->execute();
+  $edit = $query->fetch();
+	return $edit;
+}
+
+function supprimerlisteavoir($id) {
+	global $pdo;
+	$sql = "DELETE FROM favoris WHERE id = :id";
+	$query = $pdo->prepare($sql);
+  $query->bindValue(':id',$id,PDO::PARAM_INT);
+  $query->execute();
 }

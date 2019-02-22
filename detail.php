@@ -27,6 +27,6 @@ include('inc/header.php'); ?>
 
   <?php
     if (isLogged()) { ?>
-      <a class="blanc red" href="filmavoir.php?id=<?php echo $movie['id']; ?>" title="Ajouter aux favoris"><i class="fas fa-heart"></i></a>
+      <a class="blanc red centre" href="filmavoir.php?id=<?php echo $movie['id']; ?>" title="Ajouter aux favoris"><i class="fas fa-heart"></i></a>
     <?php } ?>
 <?php include('inc/footer.php');

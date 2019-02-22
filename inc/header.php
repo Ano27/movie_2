@@ -39,13 +39,12 @@
                 </li>
                 <?php if (isAdmin()) { ?>
                   <li class="nav-item">
+                    <a class="blanc filtre" href="#">• Filtre</a>
+                  </li>
+                  <li class="nav-item">
                     <a class="blanc vert" href="admin/index.php" title="Lets go Back">• Go au Back</a>
                   </li>
                 <?php } ?>
-                <li class="nav-item">
-                  <!-- <p class="blanc filtre">Filtre</p> -->
-                  <a class="blanc filtre" href="#">Filtre</a>
-                </li>
                 <li class="nav-item">
                   <p><?php echo 'Bonjour'.' '. $_SESSION['user']['pseudo']; ?></p>
                 </li>
