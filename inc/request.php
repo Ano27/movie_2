@@ -77,6 +77,18 @@ function getAlldscrition() {
 	$movies = $query->fetchAll();
 	  return $movies;
 }
+
+
+function ajoutFilmFavoris($id_user,$id_movie) {
+	global $pdo;
+	$sql = "INSERT INTO favoris (user_id,movie_id,note,created_at,modified_at) VALUES (:iduser,:idmovie,NULL,NOW(),NULL)";
+	$query = $pdo->prepare($sql);
+	$query->bindValue(':iduser',$id_user,PDO::PARAM_STR);
+	$query->bindValue(':idmovie',$id_movie,PDO::PARAM_STR);
+	$query->execute();
+}
+
+
 function countUser(){
 	global $pdo;
 	$sql = "SELECT COUNT(id) FROM users ";
@@ -96,7 +108,15 @@ function countUser(){
 // 	  return $movies;
 // }
 
-// function ajoutFilmFavoris() {
-// 	global $pdo;
-// 	$sql = "INSERT INTO 'movies_full' ()"
-// }
+function voirFilmFavoris($user_id) {
+	global $pdo;
+	$sql = "SELECT f.id AS idnote, m.title AS title,m.id AS id, m.year FROM favoris AS f
+				LEFT JOIN movies_full AS m
+				ON f.movie_id = m.id
+				WHERE user_id = $user_id";
+
+	$query = $pdo->prepare($sql);
+	$query->execute();
+	$results = $query->fetchAll();
+	return $results;
+}
