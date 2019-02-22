@@ -35,7 +35,7 @@
                   <a class="blanc bleu" href="profil.php" title="Mon profil">• <i class="fas fa-user"></i></a>
                 </li>
                 <li class="nav-item">
-                  <a class="blanc red" href="filmavoir.php" title="Mes films à voir">• <i class="fas fa-heart"></i></a>
+                  <a class="blanc red" href="favoris.php" title="Mes films à voir">• <i class="fas fa-heart"></i></a>
                 </li>
                 <?php if (isAdmin()) { ?>
                   <li class="nav-item">

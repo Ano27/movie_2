@@ -15,6 +15,7 @@ if(!empty($_GET['slug'])) {
 } else {
     die('404');
  }
+
 include('inc/header.php'); ?>
   <a id="Retourhome" href="index.php">← Retour en arrière</a>
 
@@ -24,5 +25,8 @@ include('inc/header.php'); ?>
   <h3 class="detailinfos">Réalisateur : <?php echo $movie['directors'] ?></h3>
   <h3 class="detailinfos">Note : <?php echo $movie['rating'] ?></h3>
 
-  <a class="blanc red filmavoirdetail" href="filmavoir.php?slug=<?php echo $movie['slug']; ?>" title="Ajouter aux favoris"><i class="fas fa-heart"></i></a>
+  <?php
+    if (isLogged()) { ?>
+      <a class="blanc red" href="filmavoir.php?id=<?php echo $movie['id']; ?>" title="Ajouter aux favoris"><i class="fas fa-heart"></i></a>
+    <?php } ?>
 <?php include('inc/footer.php');
