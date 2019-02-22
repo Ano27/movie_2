@@ -44,7 +44,6 @@ margin-bottom: 50px;position: relative;
   text-decoration: none;
   font-size: 1.2em;
 }
-
 .blanc:hover {
   text-decoration: none;
   color: #000;
@@ -204,7 +203,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
   display: block;
   text-align: center;
 }
-
+.fav {
+  text-align: center;
+  margin-top: 10px;
+}
 /* RETOUR HOME */
 #Retourhome {
   font-size: 2em;
@@ -213,5 +215,5 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
 }
 
 #Retourhome:hover {
-  color: #000;
+  color: rgb(109,179,242);
 }

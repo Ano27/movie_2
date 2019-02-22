@@ -22,11 +22,16 @@ include('inc/header.php'); ?>
   <h2 class="detailinfos">Titre : <?php echo $movie['title'] ?></h2>
   <p id="affichedefilm"><?php affichdeft($movie)?></p>
   <h3 class="detailinfos">Année : <?php echo $movie['year'] ?></h3>
+  <h3 class="detailinfos">Genre : <?php echo $movie['genres'] ?></h3>
   <h3 class="detailinfos">Réalisateur : <?php echo $movie['directors'] ?></h3>
   <h3 class="detailinfos">Note : <?php echo $movie['rating'] ?></h3>
+  <h3 class="detailinfos">Popularity : <?php echo $movie['popularity'] ?></h3>
+  <h3 class="detailinfos">Temps : <?php echo $movie['runtime'] ?></h3>
 
   <?php
     if (isLogged()) { ?>
-      <a class="blanc red" href="filmavoir.php?id=<?php echo $movie['id']; ?>" title="Ajouter aux favoris"><i class="fas fa-heart"></i></a>
+      <div class="fav">
+        <a class="blanc red" href="filmavoir.php?id=<?php echo $movie['id']; ?>" title="Ajouter aux favoris"><i class="fas fa-heart"></i></a>
+      </div>
     <?php } ?>
 <?php include('inc/footer.php');
