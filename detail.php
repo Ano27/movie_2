@@ -24,6 +24,7 @@ include('inc/header.php'); ?>
   <h3 class="detailinfos">Année : <?php echo $movie['year'] ?></h3>
   <h3 class="detailinfos">Réalisateur : <?php echo $movie['directors'] ?></h3>
   <h3 class="detailinfos">Note : <?php echo $movie['rating'] ?></h3>
+  
 
   <?php
     if (isLogged()) { ?>
