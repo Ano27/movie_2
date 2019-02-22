@@ -54,7 +54,8 @@ function getMovieBySlug($slug){
 function getAllUsers(){
 	global $pdo;
 	$sql = "SELECT * FROM users
-					ORDER BY id ASC";
+					ORDER BY createdat DESC
+					LIMIT 5";
 	$query = $pdo->prepare($sql);
 	$query->execute();
 	$users = $query->fetchAll();
@@ -64,22 +65,31 @@ function getAllUsers(){
 function getAlldscrition() {
 	global $pdo;
 	$sql = "SELECT * FROM movies_full
-	        ORDER BY created	ASC";
+	        ORDER BY created	DESC
+					LIMIT 30";
 	$query = $pdo->prepare($sql);
 	$query->execute();
 	$movies = $query->fetchAll();
 	  return $movies;
 }
-function countFilms()
-{
- global $pdo;
- $sql = "SELECT COUNT(id) FROM movies_full";
- $query = $pdo->prepare($sql);
- $query->execute();
- $totalItems = $query->fetchColumn();
- return $totalItems;
+function countUser(){
+	global $pdo;
+	$sql = "SELECT COUNT(id) FROM users ";
+	$query = $pdo->prepare($sql);
+	$query->execute();
+	$totalFilms = $query->fetchColumn();
+	return $totalFilms;
 }
-
+// function statfilm() {
+// 	global $pdo;
+// 	$sql = "SELECT 	* FROM movies_full
+// 	        ORDER BY created ASC
+// 	        LIMIT 30";
+// 	$query = $pdo->prepare($sql);
+// 	$query->execute();
+// 	$movies = $query->fetchAll();
+// 	  return $movies;
+// }
 
 // function ajoutFilmFavoris() {
 // 	global $pdo;
