@@ -179,10 +179,10 @@ text-align: center;
   width: 100%;
 }
 .afficheposter {text-align: center;}
-/* #afficherecherche {
+#afficherecherche {
   display: block;
   text-align: center;
-} */
+}
 
 /* DETAIL */
 
@@ -223,7 +223,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
 
 #Retourhome:hover {
   color: rgb(109,179,242);
-<<<<<<< HEAD
 }
 
 /* TABLEAU FAVORIS */
