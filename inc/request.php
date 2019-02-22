@@ -55,7 +55,7 @@ function getAllUsers(){
 	$users = $query->fetchAll();
 	return $users;
 }
-<<<<<<< HEAD
+
 function getAllAdmin() {
 	global $pdo;
 	$sql = "SELECT * FROM movies_full
@@ -66,8 +66,7 @@ function getAllAdmin() {
 	$movies = $query->fetchAll();
 	  return $movies;
 }
-=======
->>>>>>> e7fecab739667a4224cce9b85aafe6641056f402
+
 function getAlldscrition() {
 	global $pdo;
 	$sql = "SELECT * FROM movies_full
