@@ -126,8 +126,9 @@ border-radius: 50px;
 padding: 10px;
 text-transform: uppercase;
 text-decoration: none;
-}
 
+}
+.centerbutton {text-align: center;margin-top: 20px;padding-bottom: 50px;}
 #plusdefilm:hover {
   background-color: #1A7CDB;
 }
